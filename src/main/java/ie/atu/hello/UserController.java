@@ -1,12 +1,16 @@
 package ie.atu.hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
+
+@RestController
 public class UserController {
 
 
@@ -16,7 +20,7 @@ public class UserController {
 
     @Autowired
     public UserController(AcknowledgeService acknowledgeService, RegistrationServiceClient registrationServiceClient){
-        this.acknowledgeService =acknowledgeService;
+        this.acknowledgeService = acknowledgeService;
         this.registrationServiceClient =registrationServiceClient;
 
     }
